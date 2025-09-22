@@ -5,7 +5,7 @@ public class Pet {
     //Atributos
     private String nome;
     private String id;
-    private String idade;
+    private int idade;
     private String raca;
     private String nivelCuidado;
 
@@ -14,9 +14,17 @@ public class Pet {
     }
 
     //Métodos de acesso
-    public String getNome() {
-        return nome;
+    public int getIdade() {
+        return idade;
     }
+
+    public void setIdade(int i) {
+        this.idade = i;
+    }
+
+    public String getNome() {
+        return nome; 
+    }   
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -28,14 +36,6 @@ public class Pet {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getIdade() {
-        return idade;
-    }
-
-    public void setIdade(String idade) {
-        this.idade = idade;
     }
 
     public String getRaca() {
