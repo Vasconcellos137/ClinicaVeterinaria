@@ -13,7 +13,7 @@ public class Clinica {
     //Construtor
     public Clinica() {
     }
-
+ 
     //Métodos de acesso
     public String getNome() {
         return nome;

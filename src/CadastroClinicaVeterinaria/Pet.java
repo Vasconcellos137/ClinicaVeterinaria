@@ -8,9 +8,11 @@ public class Pet {
     private int idade;
     private String raca;
     private String nivelCuidado;
+   
 
     //Construtor
     public Pet() {
+        
     }
 
     //Métodos de acesso

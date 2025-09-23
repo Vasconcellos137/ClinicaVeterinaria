@@ -10,8 +10,9 @@ public class CadastroDePet {
     final static Scanner LER = new Scanner (System.in);
 
     static List<Pet> listPets = new ArrayList();
-
+   
     public CadastroDePet() {
+        
     }
 
 //Método p inserir
@@ -20,12 +21,18 @@ public class CadastroDePet {
     }
 
 //Método p remover
-    public void remover(Pet lisPet, Pet pet, int pos){
+    public void remover(Pet pet, int pos){
         listPets.remove(pet); 
     }
 
 //Método p listar/mostrar as informação do pet
     public void listar(){
+
+        if (listPets == null || listPets.isEmpty()) {
+            System.out.println("Nenhum pet cadastrado.");
+            return;
+        }
+
         for (Pet pet : listPets) {
             System.out.println("•·•·• Informações do Pet •·•·•");
 
@@ -37,17 +44,12 @@ public class CadastroDePet {
         }
     }
 
-//Método p alterar alguma informação
+//Método p alterar alguma informação - ERRO
     public void alterar(Pet lisPet, int x){
+
         if (x >= 0 && x < listPets.size()) {
             Pet pet = listPets.get(x);
             
-            System.out.println("•·•Opções para alteração•·•");
-            System.out.println("1 - Nome");
-            System.out.println("2 - Idade");
-            System.out.println("3 - Raça");
-            System.out.println("4 - Nível de Cuidado");
-
             int escoliose = LER.nextInt();
             
             switch (escoliose) {
