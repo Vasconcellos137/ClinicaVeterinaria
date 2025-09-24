@@ -39,8 +39,33 @@ public class Main {
                     cadastrarFuncio(cadastroDeFuncionario);
                     break;
 
-                case 4:
-                    
+                case 4:                    
+                    System.out.println("•·•Menu - Ofertas de Serviço•·•");
+                    System.out.println("Press 1 - Listar serviços ofertados.");
+                    System.out.println("Press 2 - Realizar cadastro de serviço.");
+                    System.out.println("Press 0 - Sair.");
+
+                    OfertaServicos oferSer = new OfertaServicos();
+
+                    int hah = LER.nextInt();
+                    switch (hah) {
+                        case 1:
+                            oferSer.listar();
+                            oferSer.pularLinha();
+                            break;
+
+                        case 2:
+                            cadastrarOfertasServico(oferSer);
+
+                        case 0:
+                            break;
+
+                        default:
+                            System.out.println("Opção inválida..");
+                            oferSer.pularLinha();
+                            break;
+                    }
+                    break;
 
                 case 0:
                     break;
@@ -54,7 +79,7 @@ public class Main {
 
     }
 
-    public static void cadastrarOfertasServico(OfertaServicos oferServ){
+    public static void cadastrarOfertasServico(OfertaServicos oferServ) {
         int op = 4;
 
         while (op != 0) {
@@ -93,8 +118,8 @@ public class Main {
 
         }
 
-    } 
-
+    }
+    
     public static void cadastrarPet(CadastroDePet cadastroDePet) {
         int op = 1;
 
