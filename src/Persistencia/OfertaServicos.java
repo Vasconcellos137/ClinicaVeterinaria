@@ -15,13 +15,15 @@ public class OfertaServicos {
     public OfertaServicos() {
 
     }
-     
-    static List<Servico> listServ = new ArrayList();
 
+    static List<Servico> listServ = new ArrayList<Servico>();
+
+
+    public 
 
 //Método p inserir
     public void inserir(){
-        Servico serv = new serv();            
+        Servico serv = new Servico();            
             System.out.println("•Inicio de Cadastro•");
 
             System.out.println("Nome:");
@@ -31,7 +33,7 @@ public class OfertaServicos {
             System.out.println("Descrição:");
             String d = LER.next();
             serv.setDescricao(d);;
-
+ 
             System.out.println("Valor:");
             String v = LER.next();
             serv.setValor(v);

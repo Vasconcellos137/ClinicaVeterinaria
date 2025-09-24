@@ -9,7 +9,7 @@ public class CadastroDeFuncionario {
 
     final static Scanner LER = new Scanner (System.in);
 
-    static List<Funcionario> listFuncions = new ArrayList(); 
+    static List<Funcionario> listFuncions = new ArrayList<Funcionario>(); 
 
     public CadastroDeFuncionario(){
 

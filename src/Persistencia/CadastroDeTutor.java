@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class CadastroDeTutor {
     final static Scanner LER = new Scanner (System.in);
 
-    static List<Tutor> listTutors = new ArrayList();
+    static List<Tutor> listTutors = new ArrayList<Tutor>();
 
     public CadastroDeTutor() {
         

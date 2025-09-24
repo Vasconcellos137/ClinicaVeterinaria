@@ -1,6 +1,10 @@
 package Persistencia;
 
+import CadastroClinicaVeterinaria.Funcionario;
+import CadastroClinicaVeterinaria.Tutor;
+import CadastroClinicaVeterinaria.Servico;
 import CadastroClinicaVeterinaria.Pet;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         Pet pet = new Pet();
 
-        int op = LER.nextInt();
+        int op = 777;
 
         while (op != 0) {
 

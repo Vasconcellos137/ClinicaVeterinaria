@@ -9,7 +9,7 @@ public class CadastroDePet {
 
     final static Scanner LER = new Scanner (System.in);
 
-    static List<Pet> listPets = new ArrayList();
+    static List<Pet> listPets = new ArrayList<Pet>();
    
     public CadastroDePet() {
         
