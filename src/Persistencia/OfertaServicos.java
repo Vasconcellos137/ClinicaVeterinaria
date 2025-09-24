@@ -18,7 +18,7 @@ public class OfertaServicos {
 
     static List<Servico> listServ = new ArrayList<Servico>();
 
-    
+    listServ.add("Banho e tosa", "Serviço de banho e tosa para pets de pequeno, médio e grande porte.", "R$ 80,00");
 
 //Método p inserir
     public void inserir(){
