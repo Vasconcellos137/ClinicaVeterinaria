@@ -18,6 +18,7 @@ public class Main {
             System.out.println("Press 1 - Cadastro de Pet's");
             System.out.println("Press 2 - Cadastro de Tutor's");
             System.out.println("Press 3 - Cadastro de Funcionário's");
+            System.out.println("Press 4 - Menu de Ofertas de Serviço.");
             System.out.println("Press 0 - Sair");
 
             int escolha = LER.nextInt();
@@ -38,6 +39,9 @@ public class Main {
                     cadastrarFuncio(cadastroDeFuncionario);
                     break;
 
+                case 4:
+                    
+
                 case 0:
                     break;
 
@@ -49,6 +53,47 @@ public class Main {
         }
 
     }
+
+    public static void cadastrarOfertasServico(OfertaServicos oferServ){
+        int op = 4;
+
+        while (op != 0) {
+            System.out.println("•·•Opções de cadastro•·•");
+            System.out.println("Press 1 - Cadastrar novo serviço.");
+            System.out.println("Press 3 - Remover um cadastro.");
+            System.out.println("Press 0 - Sair.");
+
+            oferServ.pularLinha();
+
+            int x = LER.nextInt();
+            switch (x) {
+                case 1:
+                    oferServ.inserir();
+                    oferServ.pularLinha();
+                    break;
+
+                case 3:
+                    System.out.println("Indique a posição do cadastro no sistema:");
+                    int pos = LER.nextInt();
+
+                    oferServ.remover(pos);
+                    oferServ.listar();
+                    oferServ.pularLinha();
+                    break;
+
+                case 0:
+                    oferServ.pularLinha();
+                    break;
+
+                default:
+                    System.out.println("Opção inválida colega...");
+                    oferServ.pularLinha();
+                    break;
+            }
+
+        }
+
+    } 
 
     public static void cadastrarPet(CadastroDePet cadastroDePet) {
         int op = 1;
