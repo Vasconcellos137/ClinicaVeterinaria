@@ -19,7 +19,18 @@ public class OfertaServicos {
     static List<Servico> listServ = new ArrayList<Servico>();
 
 
-    public 
+    public static void criarBanco(){
+        Servico serv1 = new Servico("Banho e tosa", "Banho completo e tosa dos pelos", "R$ 100,00");
+        Servico serv2 = new Servico("Consulta veterinária", "Avaliação geral da saúde do pet", "R$ 150,00");
+        Servico serv3 = new Servico("Cortar unhas", "Corte e higienização completa", "R$ 80,00");
+        Servico serv4 = new Servico("Vacinação", "Vacinas essenciais para o pet", "R$ 120,00");
+        
+        listServ.add(serv1);
+        listServ.add(serv2);
+        listServ.add(serv3);
+        listServ.add(serv4);
+
+    } 
 
 //Método p inserir
     public void inserir(){
