@@ -16,13 +16,44 @@ public class CadastroDePet {
     }
 
 //Método p inserir
-    public void inserir(Pet pet){
+    public void inserir(){
+        Pet pet = new Pet();            
+            System.out.println("•Inicio de Cadastro•");
+
+            System.out.println("Nome:");
+            String nome = LER.next();
+            pet.setNome(nome);
+        
+            System.out.println("Id:");
+            String id = LER.next();     
+            pet.setId(id);             
+        
+            System.out.println("Raça:");
+            String r = LER.next();
+            pet.setRaca(r);
+        
+            System.out.println("Idade:");
+            int i = LER.nextInt();
+            pet.setIdade(i);
+        
+            System.out.println("Nível de cuidado:");
+            String n = LER.next();
+            pet.setNivelCuidado(n);
+
+            System.out.println("Cadastro realizado com sucesso!");
+
         listPets.add(pet);
     }
 
 //Método p remover
-    public void remover(Pet pet, int pos){
-        listPets.remove(pet); 
+    public void remover(int pos){
+        for (int i = 0; i < listPets.size(); i++) {
+            if (pos == i) {
+                listPets.remove(i);                 
+            }
+        }
+
+        System.out.println("Remoção realizado com sucesso!");
     }
 
 //Método p listar/mostrar as informação do pet
@@ -34,6 +65,7 @@ public class CadastroDePet {
         }
 
         for (Pet pet : listPets) {
+            pularLinha();
             System.out.println("•·•·• Informações do Pet •·•·•");
 
             System.out.println("Nome: " + pet.getNome());
@@ -44,49 +76,11 @@ public class CadastroDePet {
         }
     }
 
-//Método p alterar alguma informação - ERRO
-    public void alterar(Pet lisPet, int x){
-
-        if (x >= 0 && x < listPets.size()) {
-            Pet pet = listPets.get(x);
-            
-            int escoliose = LER.nextInt();
-            
-            switch (escoliose) {
-                case 1:  // Alterar nome
-                    System.out.print("Novo nome: ");
-                    String novoNome = LER.next();
-                    pet.setNome(novoNome);
-                    System.out.println("Nome alterado com sucesso!");
-                    break;
-
-                case 2:  // Alterar idade
-                    System.out.print("Nova idade: ");
-                    int newIdade = LER.nextInt();
-                    pet.setIdade(newIdade);
-                    System.out.println("Idade alterada com sucesso!");
-                    break;
-
-                    case 3:  // Alterar raça
-                    System.out.print("Nova raça: ");
-                    String newRaca = LER.next();
-                    pet.setRaca(newRaca);
-                    System.out.println("Raça alterada com sucesso!");
-                    break;
-
-                case 4:  // Alterar nível de cuidado
-                    System.out.println("Novo nível de cuidado (baixo, médio, alto): ");
-                    String newNC = LER.next();
-                    pet.setNivelCuidado(newNC);
-                    System.out.println("Nível de cuidado alterado com sucesso!");
-                    break;
-
-                default:
-                    System.out.println("Opção inválida!");
-                    break;
-            }
-        }
+//Método p pular linha
+    public void pularLinha(){
+        System.out.println();
+        System.out.println();
     }
-  
+
 }
     
