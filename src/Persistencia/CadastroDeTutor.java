@@ -12,31 +12,31 @@ public class CadastroDeTutor {
     static List<Tutor> listTutors = new ArrayList<Tutor>();
 
     public CadastroDeTutor() {
-    Tutor t1 = new Tutor("Nick", "16270985935", "99947091");
-    listTutors.add(t1);
+    // Tutor t1 = new Tutor("Nick", "16270985935", "99947091");
+    // listTutors.add(t1);
     }
 
-//Método p inserir
-    // public void inserir(){
-    //     Tutor tutor = new Tutor();            
-    //         System.out.println("•Inicio de Cadastro•");
+// Método p inserir
+    public void inserir(){
+        Tutor tutor = new Tutor();            
+            System.out.println("•Inicio de Cadastro•");
 
-    //         System.out.println("Nome:");
-    //         String nome = LER.next();
-    //         tutor.setNome(nome);
+            System.out.println("Nome:");
+            String nome = LER.next();
+            tutor.setNome(nome);
         
-    //         System.out.println("CPF:");
-    //         String cpf = LER.next();
-    //         tutor.setNome(cpf);
+            System.out.println("CPF:");
+            String cpf = LER.next();
+            tutor.setNome(cpf); 
 
-    //         System.out.println("Contato:");
-    //         String contt = LER.next();
-    //         tutor.setContato(contt);
+            System.out.println("Contato:");
+            String contt = LER.next();
+            tutor.setContato(contt);
 
-    //         System.out.println("Cadastro realizado com sucesso!");
+            System.out.println("Cadastro realizado com sucesso!");
 
-    //     listTutors.add(tutor);
-    // }
+        listTutors.add(tutor);
+    }
 
 //Método p remover
     public void remover(int pos){

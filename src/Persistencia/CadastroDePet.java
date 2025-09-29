@@ -14,39 +14,39 @@ public class CadastroDePet {
     static List<Pet> listPets = new ArrayList<Pet>();
    
     public CadastroDePet() {
-    Pet p1 = new Pet("Lua", "1", "cooly", "1", "B");
-    listPets.add(p1);
+    // Pet p1 = new Pet("Lua", "1", "cooly", "1", "B");
+    // listPets.add(p1);
     }
 
-//Método p inserir
-    // public void inserir(){
-    //     Pet pet = new Pet();            
-    //         System.out.println("•Inicio de Cadastro•");
+// Método p inserir
+    public void inserir(){
+        Pet pet = new Pet();            
+            System.out.println("•Inicio de Cadastro•");
 
-    //         System.out.println("Nome:");
-    //         String nome = LER.next();
-    //         pet.setNome(nome);
+            System.out.println("Nome:");
+            String nome = LER.next(); 
+            pet.setNome(nome);
         
-    //         System.out.println("Id:");
-    //         String id = LER.next();     
-    //         pet.setId(id);             
+            System.out.println("Id:");
+            String id = LER.next();     
+            pet.setId(id);             
         
-    //         System.out.println("Raça:");
-    //         String r = LER.next();
-    //         pet.setRaca(r);
+            System.out.println("Raça:");
+            String r = LER.next();
+            pet.setRaca(r);
         
-    //         System.out.println("Idade:");
-    //         int i = LER.nextInt();
-    //         pet.setIdade(i);
+            System.out.println("Idade:");
+            int i = LER.nextInt();
+            pet.setIdade(i);
         
-    //         System.out.println("Nível de cuidado:");
-    //         String n = LER.next();
-    //         pet.setNivelCuidado(n);
+            System.out.println("Nível de cuidado:");
+            String n = LER.next();
+            pet.setNivelCuidado(n);
 
-    //         System.out.println("Cadastro realizado com sucesso!");
+            System.out.println("Cadastro realizado com sucesso!");
 
-    //     listPets.add(pet);
-    // }
+        listPets.add(pet);
+    }
 
 //Método p remover
     public void remover(int pos){

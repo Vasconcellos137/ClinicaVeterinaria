@@ -14,8 +14,8 @@ public class Servico {
     public Servico() {
     }
 
-    public Servico(String string, String string2, String string3) {
-    }
+    public Servico(String string, String string2, String string3, String string4, String string5) {
+    } 
 
     //Métodos de acesso
     public String getNome() {

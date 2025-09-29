@@ -9,11 +9,13 @@ public class Pet {
     private String raca;
     private String nivelCuidado;
    
-
     //Construtor
-    public Pet(String string, String string2, String string3, String string4, String string5) {
-        
-    }
+    public Pet(){ 
+    } 
+
+    //Construtor test rápido
+    // public Pet(String string, String string2, String string3, String string4, String string5) { 
+    // }
 
     //Métodos de acesso
     public int getIdade() {
