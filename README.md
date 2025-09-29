@@ -1,20 +1,20 @@
 Tema escolhido:
-Cadastro de Clínica Veterinária banho e tosa
+Cadastros e pesquisa dentre dados do sistema de uma clínica veterinária e pet shop
 
 Maior dificuldade e por quê:
-Organizar as classes e atributos com relação às suas associações, organizar os pacotes do código. Porque tive dificuldade principalmente nisso. 
+Organizar as classes e atributos com relação às suas associações, organizar os pacotes do código. Porque sempre acabo por me confundir e fazer linhas de comando sem coerência alguma.
 
 Como executar o programa:
-fé
+Seguir as opções dos menus para realizar o cadastro ou pesquisa desejados/as.
 
 
-Diagrama d Classes Link
+Diagrama de Classes - Link
 https://drive.google.com/file/d/1hJr20k7jvaY3iFPmPhKu4vt9AqF6WgqJ/view?usp=sharing
 
 
 
 
-ERRO's
+ERRO's - Tentativa de implementar um método de alteração  
 
         // System.out.println("Press 9 - Alterar alguma informação.");
 
@@ -74,3 +74,4 @@ ERRO's
             }
         }
     }
+
