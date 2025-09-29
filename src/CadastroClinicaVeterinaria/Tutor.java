@@ -11,7 +11,7 @@ public class Tutor {
     private Pet pet;
 
     //Construtor
-    public Tutor() {
+    public Tutor(String string, String string2, String string3) {
     }
 
     //Métodos de acesso

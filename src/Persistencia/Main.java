@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Pet pet = new Pet();
+        // Pet pet = new Pet();
 
         int op = 777;
 
@@ -181,7 +181,7 @@ public class Main {
             int x = LER.nextInt();
             switch (x) {
                 case 1:
-                    cadastroDePet.inserir();
+                    // cadastroDePet.inserir();
                     cadastroDePet.pularLinha();
                     break;
 
@@ -228,7 +228,7 @@ public class Main {
             int x = LER.nextInt();
             switch (x) {
                 case 1:
-                    cadastroDeTutor.inserir();
+                    // cadastroDeTutor.inserir();
                     cadastroDeTutor.pularLinha();
                     break;
 
@@ -309,35 +309,63 @@ public class Main {
 
         System.out.println("Nome do Tutor:");
         for (int i = 0; i < CadastroDeTutor.listTutors.size(); i++) {
-            System.out.println(i + " - " + CadastroDeTutor.listTutors.get(i).getNome());
+            System.out.println("Id: " + i + " - " + "Nome: " + CadastroDeTutor.listTutors.get(i).getNome());
         }
-        int idTutor = LER.nextInt();
+        String nomeTutor = LER.next();
 
         System.out.println("Nome do Pet:");
         for (int i = 0; i < CadastroDePet.listPets.size(); i++) {
-            System.out.println(i + " - " + CadastroDePet.listPets.get(i).getNome());
+            System.out.println("Id: " + i + " - " + "Nome: " + CadastroDePet.listPets.get(i).getNome());
         }
-        int idPet = LER.nextInt();
+        String nomePet = LER.next();
 
         System.out.println("Nome do Serviço:");
         for (int i = 0; i < OfertaServicos.listServ.size(); i++) {
-            System.out.println(i + " - " + OfertaServicos.listServ.get(i).getNome());
+            System.out.println("Id: " + i + " - " + "Nome: " + OfertaServicos.listServ.get(i).getNome());
         }
-        int idServ = LER.nextInt();
+        String nomeServ = LER.next();
 
         System.out.println("Data:");
         String data = LER.next();
 
         System.out.println("Horário:");
-        int horario = LER.nextInt();
+        String horario = LER.next();
 
-        Tutor tutor = CadastroDeTutor.listTutors.get(idTutor);
-        Pet pet = CadastroDePet.listPets.get(idPet);
-        Servico servico = OfertaServicos.listServ.get(idServ);
+        Tutor tutor = buscarTutorPorNome(nomeServ);
+        Pet pet = buscarPetPorNome(nomePet);
+        Servico servico = buscarOferServPorNome(nomeServ);
 
         Agendamento novo = new Agendamento(tutor, pet, servico, data, horario);
         cadasAgend.inserir(novo);
         System.out.println("Agendamento cadastrado com sucesso!");
+    }
+
+//Métodos auxiliares da função cadastrar agendamento    
+    public static Tutor buscarTutorPorNome(String nome) {
+        for (Tutor t : CadastroDeTutor.listTutors) {
+            if (t.getNome().equalsIgnoreCase(nome)) {
+                return t;
+            }
+        }
+        return null;
+    }
+
+    public static Pet buscarPetPorNome(String nome) {
+        for (Pet p : CadastroDePet.listPets) {
+            if (p.getNome().equalsIgnoreCase(nome)) {
+                return p;
+            }
+        }
+        return null; 
+    }
+
+    public static Servico buscarOferServPorNome(String nome) {
+        for (Servico os : OfertaServicos.listServ) {
+            if (os.getNome().equalsIgnoreCase(nome)) {
+                return os;
+            }
+        }
+        return null; 
     }
 
 }

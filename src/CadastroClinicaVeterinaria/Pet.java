@@ -11,7 +11,7 @@ public class Pet {
    
 
     //Construtor
-    public Pet() {
+    public Pet(String string, String string2, String string3, String string4, String string5) {
         
     }
 

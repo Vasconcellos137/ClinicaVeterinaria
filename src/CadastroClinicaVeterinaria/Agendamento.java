@@ -4,7 +4,7 @@ public class Agendamento {
 
     //Atributos
     private String data;
-    private int horario;
+    private String horario;
 
     //Associações
     private Servico servico;
@@ -12,10 +12,10 @@ public class Agendamento {
     private Pet pet;
 
     //Construtor
-    public Agendamento(Tutor tutor, Pet pet, Servico servico, String data, int horario2) {
+    public Agendamento(Tutor tutor, Pet pet, Servico servico, String data, String horario2) {
         this.tutor = tutor;
         this.pet = pet;
-        this.servico = servico;
+        this.servico = servico; 
         this.data = data;
         this.horario = horario2;
     }
@@ -29,11 +29,11 @@ public class Agendamento {
         this.data = data;
     }
 
-    public int getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(int horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
 

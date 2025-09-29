@@ -10,7 +10,7 @@ public class CadastroAgendamental {
 
     final static Scanner LER = new Scanner(System.in);
 
-    Agendamento agerd = new Agendamento(null, null, null, null, 0);
+    Agendamento agerd = new Agendamento(null, null, null, null,null);
 
     public CadastroAgendamental() {
 
