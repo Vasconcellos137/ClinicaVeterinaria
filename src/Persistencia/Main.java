@@ -13,6 +13,7 @@ public class Main {
     final static Scanner LER = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         Pet pet = new Pet();
 
         int op = 777;
@@ -24,7 +25,7 @@ public class Main {
             System.out.println("Press 2 - Cadastro de Tutor's");
             System.out.println("Press 3 - Cadastro de Funcionário's");
             System.out.println("Press 4 - Menu de Ofertas de Serviço.");
-            System.out.println("Press 5 - Agendamento de serviço.");
+            System.out.println("Press 5 - Menu de Agendamento de Serviço.");
             System.out.println("Press 0 - Sair");
 
             int escolha = LER.nextInt();
@@ -88,28 +89,28 @@ public class Main {
                             cadastrarAgendamento(cadasAgend);
                             cadasAgend.pularLinha();
                             break;
-                        
+
                         case 2:
                             cadasAgend.listar();
-                            cadasAgend.pularLinha();    
+                            cadasAgend.pularLinha();
                             break;
 
                         case 3:
-                        System.out.println("Indique a posição do cadastro no sistema:");
-                        int pos = LER.nextInt();
-    
-                        cadasAgend.remover(pos);
-                        cadasAgend.listar();
-                        cadasAgend.pularLinha();
-                        break;    
+                            System.out.println("Indique a posição do cadastro no sistema:");
+                            int pos = LER.nextInt();
+
+                            cadasAgend.remover(pos);
+                            cadasAgend.listar();
+                            cadasAgend.pularLinha();
+                            break;
 
                         case 0:
                             break;
 
                         default:
-                        System.out.println("Opção inválida..");
-                        cadasAgend.pularLinha();
-                        break;
+                            System.out.println("Opção inválida..");
+                            cadasAgend.pularLinha();
+                            break;
                     }
 
                 case 0:
@@ -305,20 +306,21 @@ public class Main {
     }
 
     public static void cadastrarAgendamento(CadastroAgendamental cadasAgend) {
-        System.out.println("Digite o índice do Cliente:");
+
+        System.out.println("Nome do Tutor:");
         for (int i = 0; i < CadastroDeTutor.listTutors.size(); i++) {
             System.out.println(i + " - " + CadastroDeTutor.listTutors.get(i).getNome());
         }
         int idTutor = LER.nextInt();
 
-        System.out.println("Digite o índice do Pet:");
-        for(int i = 0; i < CadastroDePet.listPets.size(); i++){
+        System.out.println("Nome do Pet:");
+        for (int i = 0; i < CadastroDePet.listPets.size(); i++) {
             System.out.println(i + " - " + CadastroDePet.listPets.get(i).getNome());
         }
         int idPet = LER.nextInt();
 
-        System.out.println("Digite o índice do Serviço:");
-        for(int i = 0; i < OfertaServicos.listServ.size(); i++){
+        System.out.println("Nome do Serviço:");
+        for (int i = 0; i < OfertaServicos.listServ.size(); i++) {
             System.out.println(i + " - " + OfertaServicos.listServ.get(i).getNome());
         }
         int idServ = LER.nextInt();
@@ -327,7 +329,7 @@ public class Main {
         String data = LER.next();
 
         System.out.println("Horário:");
-        String horario = LER.next();
+        int horario = LER.nextInt();
 
         Tutor tutor = CadastroDeTutor.listTutors.get(idTutor);
         Pet pet = CadastroDePet.listPets.get(idPet);
@@ -337,4 +339,5 @@ public class Main {
         cadasAgend.inserir(novo);
         System.out.println("Agendamento cadastrado com sucesso!");
     }
+
 }
