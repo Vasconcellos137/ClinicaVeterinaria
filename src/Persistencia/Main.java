@@ -1,5 +1,6 @@
 package Persistencia;
 
+import CadastroClinicaVeterinaria.Agendamento;
 import CadastroClinicaVeterinaria.Funcionario;
 import CadastroClinicaVeterinaria.Tutor;
 import CadastroClinicaVeterinaria.Servico;
@@ -23,6 +24,7 @@ public class Main {
             System.out.println("Press 2 - Cadastro de Tutor's");
             System.out.println("Press 3 - Cadastro de Funcionário's");
             System.out.println("Press 4 - Menu de Ofertas de Serviço.");
+            System.out.println("Press 5 - Agendamento de serviço.");
             System.out.println("Press 0 - Sair");
 
             int escolha = LER.nextInt();
@@ -43,7 +45,7 @@ public class Main {
                     cadastrarFuncio(cadastroDeFuncionario);
                     break;
 
-                case 4:                    
+                case 4:
                     System.out.println("•·•Menu - Ofertas de Serviço•·•");
                     System.out.println("Press 1 - Listar serviços ofertados.");
                     System.out.println("Press 2 - Realizar cadastro de serviço.");
@@ -70,6 +72,45 @@ public class Main {
                             break;
                     }
                     break;
+
+                case 5:
+                    System.out.println("•·•Menu - Agendamento•·•");
+                    System.out.println("1 - Cadastrar Agendamento");
+                    System.out.println("2 - Listar Agendamentos");
+                    System.out.println("3 - Remover Agendamento");
+                    System.out.println("0 - Sair");
+
+                    CadastroAgendamental cadasAgend = new CadastroAgendamental();
+
+                    int booh = LER.nextInt();
+                    switch (booh) {
+                        case 1:
+                            cadastrarAgendamento(cadasAgend);
+                            cadasAgend.pularLinha();
+                            break;
+                        
+                        case 2:
+                            cadasAgend.listar();
+                            cadasAgend.pularLinha();    
+                            break;
+
+                        case 3:
+                        System.out.println("Indique a posição do cadastro no sistema:");
+                        int pos = LER.nextInt();
+    
+                        cadasAgend.remover(pos);
+                        cadasAgend.listar();
+                        cadasAgend.pularLinha();
+                        break;    
+
+                        case 0:
+                            break;
+
+                        default:
+                        System.out.println("Opção inválida..");
+                        cadasAgend.pularLinha();
+                        break;
+                    }
 
                 case 0:
                     break;
@@ -123,7 +164,7 @@ public class Main {
         }
 
     }
-    
+
     public static void cadastrarPet(CadastroDePet cadastroDePet) {
         int op = 1;
 
@@ -263,4 +304,37 @@ public class Main {
         }
     }
 
+    public static void cadastrarAgendamento(CadastroAgendamental cadasAgend) {
+        System.out.println("Digite o índice do Cliente:");
+        for (int i = 0; i < CadastroDeTutor.listTutors.size(); i++) {
+            System.out.println(i + " - " + CadastroDeTutor.listTutors.get(i).getNome());
+        }
+        int idTutor = LER.nextInt();
+
+        System.out.println("Digite o índice do Pet:");
+        for(int i = 0; i < CadastroDePet.listPets.size(); i++){
+            System.out.println(i + " - " + CadastroDePet.listPets.get(i).getNome());
+        }
+        int idPet = LER.nextInt();
+
+        System.out.println("Digite o índice do Serviço:");
+        for(int i = 0; i < OfertaServicos.listServ.size(); i++){
+            System.out.println(i + " - " + OfertaServicos.listServ.get(i).getNome());
+        }
+        int idServ = LER.nextInt();
+
+        System.out.println("Data:");
+        String data = LER.next();
+
+        System.out.println("Horário:");
+        String horario = LER.next();
+
+        Tutor tutor = CadastroDeTutor.listTutors.get(idTutor);
+        Pet pet = CadastroDePet.listPets.get(idPet);
+        Servico servico = OfertaServicos.listServ.get(idServ);
+
+        Agendamento novo = new Agendamento(tutor, pet, servico, data, horario);
+        cadasAgend.inserir(novo);
+        System.out.println("Agendamento cadastrado com sucesso!");
+    }
 }
