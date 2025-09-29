@@ -72,7 +72,7 @@ public class Main {
                             oferSer.pularLinha();
                             break;
                     }
-                    break;
+                    return;
 
                 case 5:
                     System.out.println("•·•Menu - Agendamento•·•");
@@ -105,7 +105,7 @@ public class Main {
                             break;
 
                         case 0:
-                            break;
+                            return;
 
                         default:
                             System.out.println("Opção inválida..");
@@ -154,7 +154,7 @@ public class Main {
 
                 case 0:
                     oferServ.pularLinha();
-                    break;
+                    return;
 
                 default:
                     System.out.println("Opção inválida colega...");
@@ -201,7 +201,7 @@ public class Main {
 
                 case 0:
                     cadastroDePet.pularLinha();
-                    break;
+                    return;
 
                 default:
                     System.out.println("Opção inválida colega...");
@@ -248,7 +248,7 @@ public class Main {
 
                 case 0:
                     cadastroDeTutor.pularLinha();
-                    break;
+                    return;
 
                 default:
                     System.out.println("Opção inválida colega...");
@@ -294,7 +294,7 @@ public class Main {
 
                 case 0:
                     cadastroDeFuncionario.pularLinha();
-                    break;
+                    return;
 
                 default:
                     System.out.println("Opção inválida colega...");

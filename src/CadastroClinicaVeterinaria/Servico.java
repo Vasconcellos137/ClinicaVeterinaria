@@ -10,8 +10,11 @@ public class Servico {
     //Associações
     private Funcionario funcionario;
 
-    //Construtor
+    //Construtor's
     public Servico() {
+    }
+
+    public Servico(String string, String string2, String string3) {
     }
 
     //Métodos de acesso
