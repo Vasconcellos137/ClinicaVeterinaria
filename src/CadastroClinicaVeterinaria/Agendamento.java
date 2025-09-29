@@ -1,19 +1,23 @@
-
 package CadastroClinicaVeterinaria;
 
 public class Agendamento {
-    
+
     //Atributos
     private String data;
     private int horario;
-    
+
     //Associações
     private Servico servico;
     private Tutor tutor;
     private Pet pet;
 
     //Construtor
-    public Agendamento() {
+    public Agendamento(Tutor tutor, Pet pet, Servico servico, String data, int horario2) {
+        this.tutor = tutor;
+        this.pet = pet;
+        this.servico = servico;
+        this.data = data;
+        this.horario = horario2;
     }
 
     //Métodos de acesso
@@ -52,7 +56,7 @@ public class Agendamento {
     public Pet getPet() {
         return pet;
     }
-    
+
     public void setPet(Pet pet) {
         this.pet = pet;
     }
