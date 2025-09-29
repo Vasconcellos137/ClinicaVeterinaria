@@ -11,18 +11,18 @@ public class OfertaServicos {
     final static Scanner LER = new Scanner(System.in);
  
     Servico serv = new Servico();
-
+ 
     public OfertaServicos() {
 
-    Servico s1 = new Servico("Banho e tosa", "Serviço de banho e tosa completo para animais de pequeno a grande porte.", "R$100,00");
+    Servico s1 = new Servico("Banho e tosa", "Serviço de banho e tosa completo para animais de pequeno a grande porte.", "R$100,00", "A combinar", "A combinar");
     listServ.add(s1);
-    Servico s2 = new Servico("Cuidado das patas", "Serviço de aparo e higenização de patas, tanto felinas quanto caninas.", "R$80,00");
+    Servico s2 = new Servico("Cuidado das patas", "Serviço de aparo e higenização de patas, tanto felinas quanto caninas.", "R$80,00", "A combinar", "A combinar");
     listServ.add(s2);
-    Servico s3 = new Servico("Vacinação", "Vacinas básicas a qualquer bichinho.", "Variável, depende do medicamento.");
+    Servico s3 = new Servico("Vacinação", "Vacinas básicas a qualquer bichinho.", "Variável, depende do medicamento.", "A combinar", "A combinar");
     listServ.add(s3);
-    Servico s4 = new Servico("Check-up geral", "Inclui exame de sangue, avaliação da estrutura e exames básicos.", "R$700,00");
+    Servico s4 = new Servico("Check-up geral", "Inclui exame de sangue, avaliação da estrutura e exames básicos.", "R$700,00", "A combinar", "A combinar");
     listServ.add(s4);
-    Servico s5 = new Servico("Avaliação odontológica", "Avaliação dental e encaminhamento caso necessário.", "R$400,00");
+    Servico s5 = new Servico("Avaliação odontológica", "Avaliação dental e encaminhamento caso necessário.", "R$400,00", "A combinar", "A combinar");
     listServ.add(s5);
 
     }
