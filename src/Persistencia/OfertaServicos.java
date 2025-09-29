@@ -9,14 +9,10 @@ import CadastroClinicaVeterinaria.Servico;
 public class OfertaServicos {
 
     final static Scanner LER = new Scanner(System.in);
-
+ 
     Servico serv = new Servico();
 
     public OfertaServicos() {
-
-    }
-
-    static List<Servico> listServ = new ArrayList<Servico>();
 
     Servico s1 = new Servico("Banho e tosa", "Serviço de banho e tosa completo para animais de pequeno a grande porte.", "R$100,00");
     listServ.add(s1);
@@ -28,6 +24,10 @@ public class OfertaServicos {
     listServ.add(s4);
     Servico s5 = new Servico("Avaliação odontológica", "Avaliação dental e encaminhamento caso necessário.", "R$400,00");
     listServ.add(s5);
+
+    }
+
+    static List<Servico> listServ = new ArrayList<Servico>();
 
     // Método p inserir
     public void inserir(){
@@ -53,13 +53,12 @@ public class OfertaServicos {
 
     // Método p remover
     public void remover(int pos){
-        for (int i = 0; i < listServ.size(); i++) {
-            if (pos == i) {
-                listServ.remove(i);                 
-            }
+        if (pos >= 0 && pos < listServ.size()) {
+            listServ.remove(pos); 
+            System.out.println("Remoção realizada com sucesso!");
+        } else {
+            System.out.println("Índice inválido!");
         }
-
-        System.out.println("Remoção realizado com sucesso!");
     }
 
     // Método p listar as informação
